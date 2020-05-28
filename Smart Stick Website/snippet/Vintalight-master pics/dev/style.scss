@@ -1,0 +1,205 @@
+// == Fuentes == //
+@import url('https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Roboto');
+
+// == Variables == //
+$size: 30px; // Tamaño
+$resize: 0.7; // Redimencionamiento
+$fig-width: 10.5em; // Ancho contenedor fotografía
+$fig-height: 12.25em; // Alto contenedor fotografía
+$photo-size: 9.25em; // Tamaño fotografía
+$font-size: 1em; // Tamaño fuente
+$font-view: "Roboto", sans-serif; // Fuente pseudo elemento
+$font-description: 'Nanum Pen Script', cursive; // Fuente fotografía
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// == Función para redimensionar en pantalla pequeña == //
+@function resize($size-function) {
+    @return $size-function * $resize;
+}
+
+// == Mixin media == //
+@mixin media($screen: 500px) {
+    @media screen and (max-width: $screen){
+        @content;
+    }
+}
+
+// == Mixin para posicionar y rotar fotografías == //
+@mixin rotate($deg, $index, $transX, $transY) {
+    transform: translate($transX, $transY) rotate($deg);
+    z-index: $index;
+    &:hover {
+        transform: scale(1.15) translate($transX, $transY) rotate(0);
+    }
+    @include media(700px) {
+        transform: translate(0) rotate($deg);
+        &:hover {
+            transform: scale(1.1) translate(0) rotate(0);
+        }
+    }
+}
+
+// == Estilos de body == //
+/* Eliminar en producción */
+body {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #f2f2f2;
+    overflow-x: hidden;
+}
+
+.vintalight {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1200px;
+    padding: 50px 0;
+    &__container {
+        position: relative;
+        width: 90%;
+        max-width: $fig-width;
+        height: $fig-height;
+        background-color: #fff;
+        font-size: $size;
+        box-shadow: 0 2px 6px 1px rgba(#000, 0.5);
+        transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), box-shadow 0.5s, margin 0.5s;
+        @include media {
+            max-width: resize($fig-width);
+            height: resize($fig-height);
+        }
+        &:nth-child(1) {
+            @include rotate(-30deg, 40, 40px, 30px);
+        }
+        &:nth-child(2) {
+            @include rotate(7deg, 50, 30px, 20px);
+        }
+        &:nth-child(3) {
+            @include rotate(20deg, 40, -20px, 20px);
+        }
+        &:nth-child(4) {
+            @include rotate(10deg, 30, 40px, -10px);
+        }
+        &:nth-child(5) {
+            @include rotate(-20deg, 20, 30px, -20px);
+        }
+        &:nth-child(6) {
+            @include rotate(-10deg, 40, 30px, -40px);
+        }
+        &:hover {
+            box-shadow: 0 4px 8px 3px rgba(#000, 0.4);
+            z-index: 100;
+            @include media(700px) {
+                margin: 0 25px;
+            }
+            .vintalight__photo::before {
+                transform: scale(1);
+            }
+        }
+        &.active,
+        &.active:hover {
+            transform: rotate(0) scale(1.25);
+            @include media {
+                transform: rotate(0) scale(1.15);
+            }
+        } 
+        &.active {
+            position: relative;
+            .vintalight__photo {
+                cursor: default;
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+    &__photo {
+        position: relative;
+        width: $photo-size;
+        height: $photo-size;
+        margin: (($fig-width - $photo-size) / 2) auto 0;
+        @include media {
+            width: resize($photo-size);
+            height: resize($photo-size);
+            margin: ((resize($fig-width) - resize($photo-size)) / 2) auto 0;
+        }
+        overflow: hidden;
+        cursor: pointer;
+        &::before {
+            content: "Ver foto";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(#000, 0.5);
+            color: #fff;
+            font-size: $font-size;
+            font-family: $font-view;
+            transform: scale(0);
+            transition: all 0.25s;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__caption {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: ($fig-height - $photo-size) - (($fig-width - $photo-size) / 2);
+        @include media {
+            height: (resize($fig-height) - resize($photo-size)) - ((resize($fig-width) - resize($photo-size)) / 2);
+        }
+    }
+    &__text {
+        color: #222;
+        font-size: $font-size;
+        font-family: $font-description;
+    }
+    &-overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(#000, 0.75);
+        opacity: 0;
+        z-index: 10000;
+        transition: opacity 0.5s;
+        &.active {
+            opacity: 1;
+        }
+    }
+    &__button {
+        position: absolute;
+        $size-button: 30px;
+        top: ($size-button / -2);
+        right: ($size-button / -2);
+        width: $size-button;
+        height: $size-button;
+        background-color: hsl(0, 90, 60);
+        border: 3px solid #fff;
+        border-radius: 50%;
+        outline: none;
+        color: #fff;
+        font-size: ($size-button / 2);
+        font-weight: bold;
+        box-shadow: -2px 2px 1px rgba(#000, 0.3);
+        z-index: 10000;
+        cursor: pointer;
+    }
+}

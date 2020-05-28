@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Vintalight
+        link(rel="stylesheet", href="style.css")
+    body
+        mixin vintalight(img, description)
+            figure.vintalight__container
+                .vintalight__photo
+                    img(src=img, alt=description).vintalight__img
+                figcaption.vintalight__caption
+                    h3.vintalight__text= description
+        section.vintalight#vintalight
+            +vintalight("https://images.pexels.com/photos/69969/pexels-photo-69969.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb", "Happy Moment")
+            +vintalight("https://images.pexels.com/photos/247929/pexels-photo-247929.jpeg?h=350&auto=compress&cs=tinysrgb", "Happy Moment")
+            +vintalight("https://images.pexels.com/photos/92866/pexels-photo-92866.jpeg?h=350&auto=compress&cs=tinysrgb", "Happy Moment")
+            +vintalight("https://images.pexels.com/photos/331986/pexels-photo-331986.jpeg?h=350&auto=compress&cs=tinysrgb", "Happy Moment")
+            +vintalight("https://images.pexels.com/photos/296649/pexels-photo-296649.jpeg?h=350&auto=compress&cs=tinysrgb", "Happy Moment")
+            +vintalight("https://images.pexels.com/photos/219776/pexels-photo-219776.jpeg?h=350&auto=compress&cs=tinysrgb", "Happy Moment")
+        script(src="script.js")

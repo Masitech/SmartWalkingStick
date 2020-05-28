@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Smart Stick Project</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="img/Images/favicon.png"/>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+	
+	
+    <!-- Custom CSS Modification -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+  <!--Navigation & Intro-->
+<header>
+
+  <!--Navbar-->
+  <nav class="navbar navbar-toggleable-md navbar-dark fixed-top scrolling-navbar">
+      <div class="container">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand waves-effect waves-light" href="#" target="_blank">SmartStick</a>
+          <div class="collapse navbar-collapse" id="navbarNav1">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link " href="#features">Features</a>
+                  </li>
+				  <li class="nav-item">
+                      <a class="nav-link " href="#pics">Pictures</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#spec">Technical Specification</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#data">Data Display</a>
+                  </li>
+              </ul>
+              <!--Navbar icons-->
+          </div>
+      </div>
+  </nav>
+  <!--/.Navbar-->
+  <!--Mask-->
+  <div class="view1 view hm-black-strong">
+  
+  
+    <div class="fullscreen-video-wrap">
+      <video controls muted preload = "true" autoplay = "autoplay" loop = "loop" volume = "0">
+
+<source src = "video/blind.mp4" type = "video/mp4">
+
+	</video>
+    </div>
+	
+	
+      <div class="full-bg-img flex-center">
+	  
+          <ul>
+              <li><h1 class="h1-responsive"><span id="typed2"></span></h1></li>
+          </ul>
+      </div>
+  </div>
+  <!--/.Mask-->
+</header>
+<!--/Navigation & Intro-->
+<!-- Service -->
+<a id="features" class="offsetAnchor"></a>
+
+<div class="container">
+
+  <div class="divider-new">
+    <h2 class="h2-responsive header-border">Features</h2>
+  </div>
+
+<div class="row flex-items-xs-middle flex-items-xs-center price">
+<!-- Table #1  -->
+  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+<!-- flex center = center list -->
+    <div class="card text-xs-center flex-center wow fadeInLeft" data-wow-delay="0.1s">
+      <div class="card-header">
+        <h3 class="display-2"><span class="fa fa-code"></span></h3>
+      </div>
+      <div class="card-block">
+        <h4 class="card-title centerText">
+          Software
+        </h4>
+          <ul class="list-groupx">
+            <li class="list-group-item flex-center">Simple Web UI</li>
+            <li class="list-group-item flex-center">Cayenne MQTT API</li>
+            <li class="list-group-item flex-center">Remote Database</li>
+            <li class="list-group-item flex-center">Bluetooth Andriod App Support</li>
+            <li class="list-group-item flex-center">Google Maps Integration</li>
+          <li class="list-group-item flex-center">Andriod / ISO App Integration</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+                      <!-- Table #1  -->
+  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+    <div class="card text-xs-center flex-center wow bounceInUp" data-wow-delay="0.4s">
+      <div class="card-header">
+      <h3 class="display-2"><span class="fa fa-server wow bounce" data-wow-delay="3s"></span></h3>
+      </div>
+      <div class="card-block">
+        <h4 class="card-title centerText">
+          Hardware
+        </h4>
+          <ul class="list-group1">
+            <li class="list-group-item flex-center">2 ESP8266 @80MHZ SoC</li>
+            <li class="list-group-item flex-center">2 Atmega328 MCU</li>
+            <li class="list-group-item flex-center">Bluetooth 4.0 BLE</li>
+            <li class="list-group-item flex-center">WIFI 802.11 b/g/n 2.4GHz</li>
+            <li class="list-group-item flex-center">LM35 Temperature Sensor</li>
+            <li class="list-group-item flex-center">MPU 6050 & GMS + GPS</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table #1  -->
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+      <div class="card text-xs-center flex-center wow fadeInRight" data-wow-delay="0.1s">
+        <div class="card-header">
+          <h3 class="display-2"><span class="fa fa-blind"></span></h3>
+        </div>
+         <div class="card-block">
+         <h4 class="card-title centerText">
+           Other
+         </h4>
+          <ul class="list-group1">
+            <li class="list-group-item flex-center">Wireless Bracelet</li>
+            <li class="list-group-item flex-center">with Vibration + Sound</li>
+            <li class="list-group-item flex-center">Auto Locate Stick</li>
+            <li class="list-group-item flex-center">IBeacon Technology</li>
+            <li class="list-group-item flex-center">Cool RGB Lighting</li>
+            <li class="list-group-item flex-center">Wireless Firmware Update</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- Technical Skills -->
+<a id="pics" class="offsetAnchor"></a>
+
+<div class = "container"> 
+<div id="demo" class="carousel slide padding-top" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/images/1.jpg" alt="" width="100%" height="100%">
+    </div>
+    <div class="carousel-item">
+      <img src="img/images/4.jpg" alt="" width="100%" height="100%">
+    </div>
+    <div class="carousel-item">
+      <img src="img/images/6.jpg" alt="" width="100%" height="100%">
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+</div>
+<div class="offsetAnchor" id = "spec">
+</div>
+
+<div class="container" id="custom-skill-bar">
+
+  <div class="divider-new">
+    <h2 class="h2-responsive header-border">Technical Specification</h2>
+  </div>
+  <!-- front end -->
+  <div class="webdev">
+  <div  class="row wow fadeIn" data-wow-delay = "0.4s">
+    <div class="col-lg-6 mt-1 md-1">
+      <h2 class="h2-responsive mt-0"><span class="flex-center text-muted"><small>Front Web Development</small></span></h2>
+      <div class="skillbar clearfix hoverable" data-percent="95%">
+        <div class="skillbar-title info-color-dark" style="background: #d35400;"><span>HTML</span></div>
+        <div class="skillbar-bar info-color"></div>
+        <div class="skill-bar-percent"></div>
+      </div>
+      <!-- End Skill Bar -->
+
+      <div class="skillbar clearfix hoverable" data-percent="80%">
+        <div class="skillbar-title info-color-dark"><span>CSS</span></div>
+        <div class="skillbar-bar info-color"></div>
+        <div class="skill-bar-percent"></div>
+      </div>
+      <!-- End Skill Bar -->
+
+      <div class="skillbar clearfix hoverable" data-percent="80%">
+        <div class="skillbar-title info-color-dark"><span>JavaScript</span></div>
+        <div class="skillbar-bar info-color"></div>
+        <div class="skill-bar-percent"></div>
+      </div>
+    </div>
+
+    <div class="col-lg-6 wow zoomIn" data-wow-delay = "0.4s">
+      <p class="flex-center blue-grey-text">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+		Vivamus molestie turpis vitae felis aliquet, volutpat ornare nisl mattis. 
+		Donec dignissim consequat dignissim. Duis volutpat, dui id lobortis laoreet, 
+		risus lorem iaculis nulla, nec tristique orci elit a massa. Fusce sed urna semper, 
+		malesuada augue id, posuere eros. Fusce sagittis leo faucibus lacinia aliquam. Donec sollicitudin, 
+		nulla sit amet feugiat elementum, ex dolor blandit libero, in faucibus lorem mauris sit amet sapien.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 wow zoomInLeft" data-wow-delay = "0.6s">
+      <p class="mt-1 mb-1 blue-grey-text">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+		Vivamus molestie turpis vitae felis aliquet, volutpat ornare nisl mattis. 
+		Donec dignissim consequat dignissim. Duis volutpat, dui id lobortis laoreet, 
+		risus lorem iaculis nulla, nec tristique orci elit a massa. Fusce sed urna semper, 
+		malesuada augue id, posuere eros. Fusce sagittis leo faucibus lacinia aliquam. Donec sollicitudin, 
+		nulla sit amet feugiat elementum, ex dolor blandit libero, in faucibus lorem mauris sit amet sapien.
+      </p>
+    </div>
+    <div class="col-lg-6 wow zoomInRight" data-wow-delay = "0.6s">
+      <p class="mt-1 mb-1 blue-grey-text">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+		Vivamus molestie turpis vitae felis aliquet, volutpat ornare nisl mattis. 
+		Donec dignissim consequat dignissim. Duis volutpat, dui id lobortis laoreet, 
+		risus lorem iaculis nulla, nec tristique orci elit a massa. Fusce sed urna semper, 
+		malesuada augue id, posuere eros. Fusce sagittis leo faucibus lacinia aliquam. Donec sollicitudin, 
+		nulla sit amet feugiat elementum, ex dolor blandit libero, in faucibus lorem mauris sit amet sapien.
+      </p>
+    </div>
+  </div>
+</div>
+  <div  class="row wow slideInUp"data-wow-delay ="0.8s" data-wow-duration = "0.5s">
+    <div class="col-lg-6 mt-1 md-1">
+      <h2 class="h2-responsive mt-2"><span class="flex-center text-muted"><small>Database & Electronics</small></span></h2>
+      <div class="skillbar clearfix hoverable" data-percent="95%">
+        <div class="skillbar-title default-color-dark"><span>SQL</span></div>
+        <div class="skillbar-bar default-color"></div>
+        <div class="skill-bar-percent"></div>
+      </div>
+      <!-- End Skill Bar -->
+
+      <div class="skillbar clearfix hoverable" data-percent="85%">
+        <div class="skillbar-title default-color-dark"><span>PCB</span></div>
+        <div class="skillbar-bar default-color"></div>
+        <div class="skill-bar-percent"></div>
+      </div>
+      <!-- End Skill Bar -->
+
+      <div class="skillbar clearfix hoverable" data-percent="75%">
+        <div class="skillbar-title default-color-dark"><span>Design</span></div>
+        <div class="skillbar-bar default-color"></div>
+        <div class="skill-bar-percent"></div>
+      </div>
+      <div class="Front-Dev-Text mt-2 mb-2">
+        <p class="teal-text blue-grey-text">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+		Vivamus molestie turpis vitae felis aliquet, volutpat ornare nisl mattis. 
+		Donec dignissim consequat dignissim. Duis volutpat, dui id lobortis laoreet, 
+		risus lorem iaculis nulla, nec tristique orci elit a massa. Fusce sed urna semper, 
+		malesuada augue id, posuere eros. Fusce sagittis leo faucibus lacinia aliquam. Donec sollicitudin, 
+		nulla sit amet feugiat elementum, ex dolor blandit libero, in faucibus lorem mauris sit amet sapien.
+          </p>
+      </div>
+    </div>
+    <div class="col-lg-6 mt-1 md-1">
+      <h2 class="h2-responsive mt-2"><span class="flex-center text-muted"><small>Computer System Engineering</small></span></h2>
+      <div class="skillbar clearfix hoverable" data-percent="90%">
+        <div class="skillbar-title stylish-color-dark"><span>ESP-8266</span></div>
+        <div class="skillbar-bar stylish-color-dark"></div>
+        <div class="skill-bar-percent"></div>
+      </div>
+
+      <div class="skillbar clearfix hoverable" data-percent="50%">
+        <div class="skillbar-title stylish-color-dark"><span>Comunication Speed</span></div>
+        <div class="skillbar-bar stylish-color"></div>
+        <div class="skill-bar-percent"></div>
+      </div>
+
+      <div class="skillbar clearfix hoverable" data-percent="80%">
+        <div class="skillbar-title stylish-color-dark"><span>ESP-NOW Protocol</span></div>
+        <div class="skillbar-bar stylish-color"></div>
+        <div class="skill-bar-percent"></div>
+      </div>
+      <div class="Front-Dev-Text mt-2 mb-2">
+        <p class="blue-grey-text">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+		Vivamus molestie turpis vitae felis aliquet, volutpat ornare nisl mattis. 
+		Donec dignissim consequat dignissim. Duis volutpat, dui id lobortis laoreet, 
+		risus lorem iaculis nulla, nec tristique orci elit a massa. Fusce sed urna semper, 
+		malesuada augue id, posuere eros. Fusce sagittis leo faucibus lacinia aliquam. Donec sollicitudin, 
+		nulla sit amet feugiat elementum, ex dolor blandit libero, in faucibus lorem mauris sit amet sapien.
+          </p>
+          <a href="#">
+            <button class="btn btn-outline-info"> More Info </button>
+          </a>
+      </div>
+    </div>
+    </div>
+  </div>
+  <!-- Back End -->
+         <!-- Other -->
+</div>
+<div class="fullScreen-bg view hm-cyan-light">
+  <div class="mask pattern-8">
+  </div>
+  <div class="container">
+
+    </div>
+  </div>
+</div>
+<!-- Contact Us -->
+<a id="data" class="offsetAnchor"></a>
+<div class="container">
+  <div class="divider-new">
+    <h2 class="h2-responsive header-border">Data Manipulation</h2>
+  </div>
+<!--Section: data -->
+<section id="data">
+ 
+      <div class="col-md-12 mb-2">
+	<!--Map container-->
+        <div id="map-container" class="z-depth-1 wow fadeInUp" style="height: 400px"></div>
+        </div>
+
+</section>
+</div>
+<!-- end of constainer -->
+    <!--/.Main layout-->
+
+    <!--Footer-->
+    <footer class="page-footer center-on-small-only">
+
+        <!--Copyright-->
+        <div class="footer-copyright">
+            <div class="container-fluid">
+                <p>
+                  © 2018 Copyright: www.mahmed.tech || Designed With <i class="fa fa-heart-o" aria-hidden="true"></i> By <a> Me </a>
+                </p>
+            </div>
+        </div>
+        <!--/.Copyright-->
+    </footer>
+    <!--/.Footer-->
+
+
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/tether.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+
+    <!-- Typed.JS -->
+    <script type="text/javascript" src="js/typed.min.js"></script>
+	
+	<!-- Chart.JS  CDN---->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+
+ <!--Google Maps-->
+  <script src="https://maps.google.com/maps/api/js?key=AIzaSyBWWdsYm4WUKil_oYSk9Vuw5t8FTX80sk0"></script>
+    <!-- SCRIPTS -->
+    <!-- Google Script -->
+    <script>
+          function init_map() {
+              var var_location = new google.maps.LatLng(51.298394,1.0618744);
+              var var_mapoptions = {
+                  center: var_location,
+                  zoom: 17
+              };
+              var var_marker = new google.maps.Marker({
+                  position: var_location,
+                  map: var_map,
+                  title: "Address"
+              });
+              var var_map = new google.maps.Map(document.getElementById("map-container"),
+                  var_mapoptions);
+              var_marker.setMap(var_map);
+          }
+          google.maps.event.addDomListener(window, 'load', init_map);
+   </script>
+
+    <!-- Typed.js -->
+    <script>
+    var typed2 = new Typed('#typed2', {
+      strings: ['<strong>Hi. There ^1500 </strong>'," I'm Masum Ahmed ^1000", 'This Website Showcases The','Smart Stick ^1000','A Second Year Electronics Project','To Help The Blind & Visually Impared.'],
+      typeSpeed: 75,
+      backSpeed: 20,
+      backDelay: 400,
+      startDelay: 1250,
+      showCursor: true,
+      cursorChar: ' |',
+      autoInsertCss: true,
+      loop: false
+    });
+    </script>
+    <!-- google analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-102649627-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- Custom Skill Bar -->
+<script>
+jQuery(document).ready(function() {
+jQuery(".skillbar").each(function() {
+  jQuery(this).find(".skillbar-bar").animate(
+    {
+      width: jQuery(this).attr("data-percent")
+    },
+    25000
+  );
+});
+});
+</script>
+    <script>
+    new WOW().init();
+    </script>
+	
+	<!-- ChartJS Examples -->
+		<script>
+		
+	</script>
+        <!-- ./SCRIPTS -->
+</body>
+
+</html>
