@@ -6,9 +6,9 @@ $column = $_POST['column'];
 
 //connect to the database
 $servername = "localhost";
-$username = "aruuhntg_ma";
-$password = "Masi244144";
-$dbname = "aruuhntg_MA1";
+$username = "*****";
+$password = "****";
+$dbname = "*****";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
